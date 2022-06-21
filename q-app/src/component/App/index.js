@@ -6,6 +6,9 @@ import Input from "../Input";
 import CardDisplay from "../CardDisplay";
 import CardContainer from "../CardContainer";
 
+
+// How to connect DB to get post time?
+
 function App() {
 	const [question, setQuestion] = useState("");
 	const [questionArray, setQuestionArray] = useState([
