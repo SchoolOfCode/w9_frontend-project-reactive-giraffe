@@ -9,8 +9,8 @@ function CardDisplay(props ) {
 				return (
 					<div>
 						<p>{array.id}</p>
-						<div>
-							<img src="#" alt="#" />
+						<div className="flex-container">
+							<div className="clockIcon"></div>
 							<p>{props.time}</p>
 							<p>{array.name}</p>
 							<p>Room: {array.room_number}</p>

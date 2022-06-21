@@ -2,7 +2,7 @@ import React from "react"
 
 function Button({handleClick,buttonText}){
   return (
-    <button onClick={handleClick}>
+    <button className="q-button" onClick={handleClick}>
         {buttonText}
     </button>);
 }
