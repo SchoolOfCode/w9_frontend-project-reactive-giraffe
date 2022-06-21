@@ -41,6 +41,7 @@
 :root {
   --main-color: #F45E5E;
   --second-color:#FFC93E;
+  --card-bg-color:#FFF8E4;
   --pane-padding: 5px 42px;
 }
 
@@ -48,17 +49,13 @@
   background-image: url(../clock_icon.png);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   margin: auto;
 }
 
 .q-bg{
   background-color: var(--second-color);
-  width: 100%;
-  margin: auto;
-  margin-top: -15px;
-  min-height: 100vh;
 }
 
 .q-button{
@@ -85,8 +82,25 @@
 .flex-container {
   display: flex;
   justify-content: center;
+  background-color: var(--card-bg-color);
+  color: var(--main-color);
+  padding: 10px;
+  margin: 10px;
 }
 
+.flex-container p {
+  margin: 0px 10px;
+}
+
+.q-input{
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+.q-input:focus-visible{
+  outline:2px solid var(--main-color);
+}
 /* .logo{
   background-image: url("../../images/cathead.png") ;
   background-position: top;

@@ -6,8 +6,23 @@ import Input from "../Input";
 import CardDisplay from "../CardDisplay";
 import CardContainer from "../CardContainer";
 
+import moment from 'moment';
+moment().format();
+
+
 
 // How to connect DB to get post time?
+// install dotenv
+// submit > get posttime, recent time - posttime = time 
+// e.g 12:00 , get data from DB , get recent time = 13:00, time : 13:00 -12:00 = 1:00
+
+// let date_1 = new Date ('6/21/2022')
+// let date_2 = new date();
+
+// let difference = date_1.getTime() - datee_2.getTime();
+// console.log(difference) //base on ref time in milliseconds 
+
+// use moment.js ?
 
 function App() {
 	const [question, setQuestion] = useState("");
@@ -53,9 +68,13 @@ function App() {
 		//Post request
 	}
 
+  let date = moment().format('MM-DD-YYYY hh:mm:ss')
+  console.log(date);
+
 	return (
 		<div className="App">
 			<header className="App-header">
+        <div className="q-bg">
 				<Input
 					placeholder={"Name"}
 					value={name}
@@ -73,6 +92,7 @@ function App() {
 				></Input>
 				<Button buttonText={"Submit"} handleClick={clickSubmit}></Button>
 				<CardContainer array={questionArray} time={"12:00"}></CardContainer>
+        </div>
 			</header>
 		</div>
 	);
